@@ -1,0 +1,101 @@
+.mobile {
+    background-color: $main-text-white-color;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 999;
+
+    transform: translateX(100%);
+
+    &.is-open {
+        transform: translateX(0);
+    }
+    @media screen and (min-width: 768px) {
+        display: none;   
+    }
+    & .container {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+        padding-left: 40px;
+    } 
+    &__btn {
+        min-width: 40px;
+        min-height: 40px;
+        background-color: $main-text-white-color;
+        &--close {
+            margin-top: 16px;
+            margin-left: 385px;
+        }
+        &:hover, &:focus {
+            fill: $hover-focus-color; 
+            background-color: $main-text-white-color;
+        }
+        @media screen and (min-width: 768px) {
+            display: none;   
+        }   
+    }
+    &-menu {
+        &__list {
+            display: block;
+            align-content: center;
+            font-weight: 500;
+            font-size: 40px;
+            line-height: 1.17;
+            
+        }
+        &__link {
+            &--current {
+                color: $hover-focus-color;
+                transition: color $time $timing-function;
+            }
+            &:hover, &:focus {
+                color: $hover-focus-color;
+                transition: color $time $timing-function;
+            }
+        }
+        &__item {
+            margin-bottom: 32px;
+        }
+    }
+    &-contacts__link {
+        &--phone {
+            font-weight: 500;
+            font-size: 34px;
+            line-height: 1.17;
+            color: $hover-focus-color;
+        }
+        &--mail {
+            font-weight: 500;
+            font-size: 24px;
+            line-height: 1.17;
+            color: $pleceholder-color;
+        }
+    }
+    &-social { 
+        &__list {
+            display: flex;
+            padding-top: 64px;
+            margin-right: 20px;
+        }
+        &__item {
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 1.22;        
+            &:not(:last-child) {
+                padding-right: 10px;
+                margin-right: 20px;
+                border-right: 1px solid $border-color-input;
+                margin-bottom: 48px;
+            }
+        }
+        &__link {
+            color: $hover-focus-color;
+        }
+    }
+}
+

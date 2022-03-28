@@ -1,0 +1,77 @@
+.clients {
+    padding-top: 94px;
+    padding-bottom: 60px; 
+    @media screen and (min-width: 768px) {
+        padding-bottom: 94px;
+    }    
+    &__title { 
+        margin-bottom: 50px;
+        font-size: 36px;
+        line-height: 1.2;
+        font-weight: 700;
+        color: $main-title-color; 
+        text-align: center;
+    }
+    &__list {
+        display: flex; 
+        flex-wrap: wrap;
+        align-content: center;
+    @media screen and (min-width: 480px) {
+        margin-left: -30px;
+        margin-top: -30px;
+    }
+    
+    }
+    &__item {
+        color: $border-color-clients;
+        @media screen and (min-width: 480px) {
+            flex-basis: calc((100% - 60px) / 2);
+            margin-left: 30px;
+            margin-top: 30px;
+        }
+        @media screen and (min-width: 768px) {
+            flex-basis: calc((100% - 120px) / 4);
+            
+        }
+        @media screen and (min-width: 1200px) {
+            flex-basis: calc((100% - 180px) / 6);
+        }
+    }
+    &__link {
+        height: 92px;
+        border-radius: 4px;
+        justify-content: center;
+        align-items: center;
+        color: inherit;
+        cursor: pointer;
+        display: flex;
+        align-content: center;
+        border: 1px solid $border-color-clients;  
+        transition:  color $time $timing-function, border-color $time $timing-function;
+        &:focus, &:hover {
+            color: $hover-focus-color;
+            border-color: $hover-focus-color;   
+            transition:  color $time $timing-function, border-color $time $timing-function;
+        }
+        @media screen and (min-width: 480px) {
+            width: 210px;
+        }
+        @media screen and (min-width: 768px) {
+            width: 226px;
+        }
+        @media screen and (min-width: 1200px) {
+            width: 170px;
+        }
+    }
+    &__icon {
+        display: block;
+        fill: currentColor;
+        align-items: center;
+        cursor: pointer;
+        text-align: center;
+        &:hover, &:focus {
+            fill: $hover-focus-color;
+            background: $main-text-white-color;
+        }
+    }
+}
